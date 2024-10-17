@@ -7,11 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
+// Importar ReactiveFormModule para formularios reactivos
+// Se debe implementar en cada page que usará un formulario 
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     LoginPageRoutingModule
   ],
