@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+<<<<<<< HEAD
  <form [formGroup]="formulario" submit]="verDatosFormulario()">
   <ion-item>
     <ion-input
@@ -28,4 +29,44 @@
   Iniciar Sesion</ion-button>
 
  </form>
+=======
+  <form [formGroup]="formulario" (submit)="verDatosFormulario()" >
+    <ion-item>
+      <ion-input 
+        type="email" 
+        textLabel="Ingrese su correo"
+        formControlName="email"
+        fill="outline"
+      ></ion-input>
+      <br>
+      <ion-note>
+        Tocado {{ formulario.get("email")?.touched }}
+      </ion-note>
+      <ion-note>
+        No Tocado {{ formulario.get("email")?.untouched }}
+      </ion-note>
+      <ion-note>
+        Sucio {{ formulario.get("email")?.dirty }}
+      </ion-note>
+      <ion-note>
+        Errores {{ formulario.get("email")?.errors | json }}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-input 
+        type="password"
+        textLabel="Ingrese su contraseña"
+        formControlName="contrasenia"
+        fill="outline"
+      ></ion-input>
+    </ion-item>
+    <ion-button 
+      type="submit" 
+      role="submit" 
+    >
+      Iniciar Sesión
+    </ion-button>
+  </form>
+
+>>>>>>> 69a9c9f784c76527e298516a72db4efe2f273b3f
 </ion-content>
